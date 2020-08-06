@@ -1,4 +1,4 @@
-package algoritm_recursion_03;
+package algoritm_03_recursion;
 
 public class Greet {
 

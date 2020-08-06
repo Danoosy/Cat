@@ -1,29 +1,36 @@
 import java.sql.SQLOutput;
 
-public class Repeat {
-    private static Integer binarySearch(int[] list, int item) {
-        int low = 0;
-        int high = list.length - 1;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-        while (low <= high) {
-            int mid = (low + high) / 2;
-            int guess = list[mid];
-            if (guess == item) {
-                return mid;
-            }
-            if (guess > item) {
-                high = mid - 1;
-            } else {
-                low = mid + 1;
+public class Repeat {
+    private static List<Integer> selectionSort(List<Integer> arr) {
+        List<Integer> newArr = new ArrayList<>(arr.size());
+        int size = arr.size();
+
+        for (int i = 0; i < size; i++) {
+            int smallest = findSmallest(arr);
+            newArr.add(arr.get(smallest));
+            arr.remove(smallest);
+        }
+        return newArr;
+    }
+    private static int findSmallest(List<Integer> arr) {
+        int smallest = arr.get(0);
+        int smallestIndex = 0;
+
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(i) < smallest) {
+                smallest = arr.get(i);
+                smallestIndex = i;
             }
         }
-
-        return null;
+        return smallestIndex;
     }
 
     public static void main(String[] args) {
-        int[] myList = {1, 3, 5, 7, 9};
-        System.out.println(binarySearch(myList, 3));
-        System.out.println(binarySearch(myList, -1));
+        List<Integer> arr = new ArrayList<>(Arrays.asList(5, 3, 6, 2, 10));
+        System.out.println(selectionSort(arr));
     }
 }

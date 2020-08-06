@@ -1,3 +1,4 @@
+package algoritm_02_selection_sort;
 import java.util.Arrays;
 
 public class SelectionSort2 {
@@ -9,13 +10,13 @@ public class SelectionSort2 {
             int smallestIndex = findSmallest(arr);
             newArr[i] = arr[smallestIndex];
 
-            arr = getNewArrWithoutSmallet(arr, smallestIndex);
+            arr = getNewArrWithoutSmallest(arr, smallestIndex);
         }
 
         return newArr;
     }
 
-    private static int[] getNewArrWithoutSmallet(int[] arr, int smallestIndex) {
+    private static int[] getNewArrWithoutSmallest(int[] arr, int smallestIndex) {
         int[] newArrWithoutSmallest = new int[arr.length - 1];
         for (int i = 0; i < arr.length; i++) {
             if (i < smallestIndex) {

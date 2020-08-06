@@ -1,4 +1,4 @@
-package algoritm_selection_sort_02;
+package algoritm_02_selection_sort;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;

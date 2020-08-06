@@ -61,7 +61,7 @@
 //        return true;
 //    }
 //}
-package algoritm_main_01;
+package algoritm_01_main;
 
 public class BinarySearch {
     private static Integer binarySearch(int[] list, int item) {
