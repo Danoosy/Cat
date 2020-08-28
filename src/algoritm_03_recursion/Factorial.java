@@ -1,5 +1,5 @@
 package algoritm_03_recursion;
-
+// Факториал
 public class Factorial {
 
     private static int fact(int x) {

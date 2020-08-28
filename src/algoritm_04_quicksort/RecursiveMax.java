@@ -1,7 +1,7 @@
 package algoritm_04_quicksort;
 
 import java.util.Arrays;
-
+// Подсчет максимального числа в массиве (то, что мы писали)
 public class RecursiveMax {
 
     private static int findMax(int[] arr) {
@@ -25,7 +25,7 @@ public class RecursiveMax {
             }
         }
     }
-
+// как в книге
     private static int findMax2(int[] list) {
         if (list.length == 2) {
             return list[0] > list[1] ? list[0] : list[1];
@@ -39,6 +39,7 @@ public class RecursiveMax {
     }
 
     public static void main(String[] args) {
+
         System.out.println(findMax2(new int[] {20, 15, 55, 5}));
     }
 }

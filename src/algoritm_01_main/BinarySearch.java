@@ -62,7 +62,7 @@
 //    }
 //}
 package algoritm_01_main;
-
+// Бинарный поиск
 public class BinarySearch {
     private static Integer binarySearch(int[] list, int item) {
         int low = 0;

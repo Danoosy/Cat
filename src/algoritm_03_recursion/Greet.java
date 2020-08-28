@@ -1,5 +1,5 @@
 package algoritm_03_recursion;
-
+// Приветствие. Демонстрирует стек вызовов
 public class Greet {
 
     private static void greet2(String name) {

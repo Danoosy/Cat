@@ -1,5 +1,5 @@
 package algoritm_04_quicksort;
-
+// Пример суммирования массива чисел в цикле (но не с помощью рекурсивной функции)
 public class LoopSum {
 
     private static int sum(int[] arr) {

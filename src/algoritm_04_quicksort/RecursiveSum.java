@@ -1,6 +1,6 @@
 package algoritm_04_quicksort;
 import java.util.Arrays;
-
+// Подсчет суммы всех элементов в массиве (то, что мы писали)
 public class RecursiveSum {
 
     private static int sum(int[] arr) {
@@ -14,7 +14,7 @@ public class RecursiveSum {
             return arr[0] + sum(newArr);
         }
     }
-
+// как в книге
     private static int sum2(int[] arr) {
         if (arr.length == 0) {
             return 0;

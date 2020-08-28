@@ -2,7 +2,7 @@ package algoritm_02_selection_sort;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
-
+// Сортировка выбором
 public class SelectionSort {
 
     private static List<Integer> selectionSort(List<Integer> arr) {

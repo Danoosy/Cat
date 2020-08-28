@@ -6,19 +6,16 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Quicksort {
-    public static void main(String[] args) {
-        System.out.println(quicksort(Arrays.asList(10, 5, 2, 3)));
-    } // [2, 3, 5, 10]
 
     private static List<Integer> quicksort(List<Integer> list) {
         if (list.size() < 2) {
-            // base case, arrays with 0 or 1 element are already "sorted"
+            // Базовый случай, массивы с элементами 0 и 1 уже отсортированы
             return list;
         } else {
-            // recursive case
+            // рекурсивный случай
             Integer pivot = list.get(0);
 
-            // sub-array of all the elements less than the pivot
+            // подмассив всех элементов меньше опорного
             List<Integer> less = list.stream().skip(1).filter(el -> el <= pivot).collect(Collectors.toList());
 
             // sub-array of all the elements greater than the pivot
@@ -31,4 +28,9 @@ public class Quicksort {
                     .flatMap(Function.identity()).collect(Collectors.toList());
         }
     }
+
+    public static void main(String[] args) {
+        System.out.println(quicksort(Arrays.asList(10, 5, 2, 3)));
+    } // [2, 3, 5, 10]
+
 }
